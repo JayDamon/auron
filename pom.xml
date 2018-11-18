@@ -7,7 +7,7 @@
     <groupId>com.protean.security</groupId>
     <artifactId>auron</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>auron</name>
     <description>Auron is a Knight and a former warrior monk of Yevon, a guardian of summoner
