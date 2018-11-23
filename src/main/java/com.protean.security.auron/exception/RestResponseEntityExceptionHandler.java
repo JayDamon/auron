@@ -4,7 +4,6 @@ import com.protean.security.auron.response.BaseResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,7 +15,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    private Logger log = LoggerFactory.getLogger(ResponseEntityExceptionHandler.class);
+    private final Logger log = LoggerFactory.getLogger(ResponseEntityExceptionHandler.class);
 
     @ExceptionHandler(value = {AppException.class})
     protected ResponseEntity<?> handleAppException(AppException e, WebRequest request) {
