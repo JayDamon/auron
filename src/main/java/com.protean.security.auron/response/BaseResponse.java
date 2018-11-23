@@ -1,4 +1,4 @@
-package com.protean.security.auron.entity;
+package com.protean.security.auron.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,6 +14,14 @@ public class BaseResponse implements Serializable {
    private Integer code;
    @JsonProperty(value = "status")
    private String status;
+
+    public BaseResponse() {
+    }
+
+    public BaseResponse(Integer code, String status) {
+        this.code = code;
+        this.status = status;
+    }
 
     public Integer getCode() {
         return code;

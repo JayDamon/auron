@@ -9,12 +9,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>auron</name>
+    <middleName>auron</middleName>
     <description>Auron is a Knight and a former warrior monk of Yevon, a guardian of summoner
         Braska, and Tidus&#39;s caretaker. Auron is revered as one of the greatest guardians who
         ever lived, due to serving Braska on his successful pilgrimage. He becomes a guardian for
         Yuna, Braska&#39;s daughter, on her pilgrimage, and is, in many ways, the party&#39;s
-        mentor, as the others come to him for advice or ask for his permission.
+        mentor, as the others come to him for advice or ask for his permission. The Auron library
+        provides a base set of entity responses, error handeling and validates all rest requests.
     </description>
 
     <parent>
@@ -28,13 +29,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>10</java.version>
+        <jjwt.version>0.9.0</jjwt.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
@@ -60,11 +58,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -72,6 +65,20 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.extensions</groupId>
+            <artifactId>spring-security-saml2-core</artifactId>
+            <version>1.0.3.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
         </dependency>
     </dependencies>
 
