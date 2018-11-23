@@ -17,14 +17,9 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 public class AuronSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserRepository userRepository;
-    private final JwtTokenProvider jwtTokenProvider;
-    private final AuthenticationEntryPoint authenticationEntryPoint;
-
-    public AuronSecurityConfig(UserRepository userRepository, JwtTokenProvider jwtTokenProvider,
-                               AuthenticationEntryPoint authenticationEntryPoint) {
+    
+    public AuronSecurityConfig(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.jwtTokenProvider = jwtTokenProvider;
-        this.authenticationEntryPoint = authenticationEntryPoint;
     }
 
     @Bean(name = "userDetailsService")
