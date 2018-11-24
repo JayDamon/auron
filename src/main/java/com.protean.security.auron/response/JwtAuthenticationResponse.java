@@ -2,7 +2,7 @@ package com.protean.security.auron.response;
 
 public class JwtAuthenticationResponse extends BaseResponse {
     private String accessToken;
-    private String tokenType;
+    private String tokenType = "Bearer";
 
     public JwtAuthenticationResponse(String accessToken) {
         this.accessToken = accessToken;
