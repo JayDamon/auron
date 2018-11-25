@@ -70,7 +70,7 @@ public class User extends DateAuditable {
         @JoinTable(name = "user_role",
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name = "role_id"))
-        private Set<UserRole> userRoles = new HashSet<>();
+        private Set<AppRole> appRoles = new HashSet<>();
 
         public User() {}
 
@@ -140,11 +140,11 @@ public class User extends DateAuditable {
                 this.password = password;
         }
 
-        public Set<UserRole> getUserRoles() {
-                return userRoles;
+        public Set<AppRole> getAppRoles() {
+                return appRoles;
         }
 
-        public void setUserRoles(Set<UserRole> userRoles) {
-                this.userRoles = userRoles;
+        public void setAppRoles(Set<AppRole> appRoles) {
+                this.appRoles = appRoles;
         }
 }

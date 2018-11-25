@@ -12,8 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "role")
-public class UserRole {
+@Table(name = "app_role")
+public class AppRole {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,10 +24,10 @@ public class UserRole {
     @Column(name = "role_name", length = 60)
     private RoleName name;
 
-    public UserRole() {
+    public AppRole() {
     }
 
-    public UserRole(RoleName name) {
+    public AppRole(RoleName name) {
         this.name = name;
     }
 
