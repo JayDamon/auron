@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class Role {
+public class UserRole {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,10 +24,10 @@ public class Role {
     @Column(name = "role_name", length = 60)
     private RoleName name;
 
-    public Role() {
+    public UserRole() {
     }
 
-    public Role(RoleName name) {
+    public UserRole(RoleName name) {
         this.name = name;
     }
 
