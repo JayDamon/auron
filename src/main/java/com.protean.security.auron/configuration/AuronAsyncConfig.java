@@ -35,7 +35,7 @@ public class AuronAsyncConfig implements AsyncConfigurer {
         log.info("Setting Executor pool size to " + processors);
         executor.setCorePoolSize(processors);
         executor.setMaxPoolSize(processors);
-        executor.setThreadNamePrefix("default_task_executor_thread");
+        executor.setThreadNamePrefix("Auron Executor-");
         executor.initialize();
         return executor;
     }
