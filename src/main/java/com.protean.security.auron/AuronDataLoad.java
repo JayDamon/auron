@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 
 @Component
-public class DataLoad {
+public class AuronDataLoad {
 
     private DataSource dataSource;
 
-    public DataLoad(DataSource dataSource) {
+    public AuronDataLoad(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
