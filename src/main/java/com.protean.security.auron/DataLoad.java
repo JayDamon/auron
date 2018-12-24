@@ -16,8 +16,8 @@ public class DataLoad {
         this.dataSource = dataSource;
     }
 
-    public static void loadInitialStartData(DataSource dataSource) {
-        Resource resource = new ClassPathResource("data-test.sql");
+    public static void loadTestUserData(DataSource dataSource) {
+        Resource resource = new ClassPathResource("data-auron.sql");
         ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator(resource);
         databasePopulator.execute(dataSource);
     }
