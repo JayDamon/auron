@@ -24,6 +24,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -116,12 +117,8 @@ public class UserController {
         user.setFeatures(new HashSet<>(company.getFeatures()));
 
         log.info("Saving new User: " + user.toString());
-        User result = userRepository.save(user);
+        userRepository.save(user);
 
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentContextPath().path("/api/users/{username}")
-                .buildAndExpand(result.getUsername()).toUri();
-
-        return ResponseEntity.created(location).body(new BaseResponse(HttpStatus.OK.value(), "User registered successfully"));
+        return new ResponseEntity<>(new BaseResponse(HttpStatus.OK.value(), "User registered successfully"), HttpStatus.OK);
     }
 }

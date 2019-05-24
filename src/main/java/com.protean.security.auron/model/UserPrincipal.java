@@ -36,7 +36,7 @@ public class UserPrincipal implements UserDetails {
         this.authorities = authorities;
     }
 
-    public static UserPrincipal create(User user) { // TODO update this
+    public static UserPrincipal create(User user) {
         List<GrantedAuthority> authorities = user.getFeatures().stream().map(feature ->
                 new SimpleGrantedAuthority(feature.getName())
         ).collect(Collectors.toList());
