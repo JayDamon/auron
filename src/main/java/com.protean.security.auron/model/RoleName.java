@@ -1,6 +1,0 @@
-package com.protean.security.auron.model;
-
-public enum RoleName {
-    ROLE_USER,
-    ROLE_ADMIN
-}
