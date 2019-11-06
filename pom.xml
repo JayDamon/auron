@@ -6,7 +6,7 @@
 
     <groupId>com.protean.security</groupId>
     <artifactId>auron</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-jd-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>auron</name>
